@@ -69,7 +69,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImageAppViewModel\AppViewModels.csproj">
+    <ProjectReference Include="..\AppViewModels\AppViewModels.csproj">
       <Project>{c115804c-c4b3-4050-95c7-6ce2f9c574eb}</Project>
       <Name>AppViewModels</Name>
     </ProjectReference>
