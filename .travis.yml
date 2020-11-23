@@ -1,4 +1,4 @@
 language: csharp
 solution: SimpleApp.sln
 script:
-  - msbuild /p:Configuration=Release solution-SimpleApp.sln
+  - msbuild /p:Configuration=Release SimpleApp.sln
