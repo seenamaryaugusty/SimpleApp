@@ -58,7 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ImageSearchView.xaml">
+    <Page Include="SearchView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -66,8 +66,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ImageSearchView.xaml.cs">
-      <DependentUpon>ImageSearchView.xaml</DependentUpon>
+    <Compile Include="SearchView.xaml.cs">
+      <DependentUpon>SearchView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -99,13 +99,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImageAppModels\ImageAppModels.csproj">
+    <ProjectReference Include="..\AppModels\AppModels.csproj">
       <Project>{8933990d-1444-4113-8bde-a2af24949d05}</Project>
-      <Name>ImageAppModels</Name>
+      <Name>AppModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ImageAppViewModel\ImageAppViewModels.csproj">
+    <ProjectReference Include="..\AppViewModels\AppViewModels.csproj">
       <Project>{c115804c-c4b3-4050-95c7-6ce2f9c574eb}</Project>
-      <Name>ImageAppViewModels</Name>
+      <Name>AppViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

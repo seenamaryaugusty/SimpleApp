@@ -9,9 +9,9 @@ using System.IO;
 using BackendLibraries;
 using Backend;
 
-namespace ImageAppModels
+namespace AppModels
 {
-    public class ImageSearchModel:IImageSearchModel
+    public class ImageSearchModel:ISearchModel
     {
         private IImageXmlHelper imageXmlHelper;
         private IFileHelper fileHelper;
@@ -24,7 +24,7 @@ namespace ImageAppModels
             this.imageXmlHelper = imageXmlHelper;
             this.fileHelper = fileHelper;
         }
-        public string[] GetStaticImageUrls()
+        public string[] GetSearchItems()
         {
             return this.imageXmlHelper.GetStaticImageUrls();
         }
@@ -33,7 +33,7 @@ namespace ImageAppModels
         {
             this.fileHelper.CleanLocal();
         }
-        public bool LoadImagesToLocal(string searchWord)
+        public bool LoadSearchItemsToLocal(string searchWord)
         {
             this.CleanLocal();
             return this.imageXmlHelper.LoadImagesToLocal(searchWord);

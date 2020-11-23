@@ -69,9 +69,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImageAppViewModel\ImageAppViewModels.csproj">
+    <ProjectReference Include="..\ImageAppViewModel\AppViewModels.csproj">
       <Project>{c115804c-c4b3-4050-95c7-6ce2f9c574eb}</Project>
-      <Name>ImageAppViewModels</Name>
+      <Name>AppViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\ModelLibraries\ModelLibraries.csproj">
       <Project>{3a61366b-2a53-4d03-aa67-fa8a79338701}</Project>

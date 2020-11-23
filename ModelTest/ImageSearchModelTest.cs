@@ -1,6 +1,6 @@
 ﻿using System;
 using BackendLibraries;
-using ImageAppModels;
+using AppModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -25,7 +25,7 @@ namespace ModelTest
         public void ImageSearchModel_GetStaticImageUrls_Test()
         {
             this.imageXmlHelperMock.Setup(im => im.GetStaticImageUrls()).Returns(new string[] { "sampleUrl" });
-            string actual = this.model.GetStaticImageUrls()[0];
+            string actual = this.model.GetSearchItems()[0];
             string expected = "sampleUrl";
             Assert.AreEqual(actual, expected);
         }
@@ -34,7 +34,7 @@ namespace ModelTest
         public void ImageSearchModel_LoadImagesToLocal_Test()
         {
             this.imageXmlHelperMock.Setup(im => im.LoadImagesToLocal(It.IsAny<string>())).Returns(true);
-            Assert.IsTrue(this.model.LoadImagesToLocal("sample"));
+            Assert.IsTrue(this.model.LoadSearchItemsToLocal("sample"));
         }
     }
 }

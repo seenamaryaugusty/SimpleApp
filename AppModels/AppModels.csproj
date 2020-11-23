@@ -7,8 +7,8 @@
     <ProjectGuid>{8933990D-1444-4113-8BDE-A2AF24949D05}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ImageAppModels</RootNamespace>
-    <AssemblyName>ImageAppModels</AssemblyName>
+    <RootNamespace>AppModels</RootNamespace>
+    <AssemblyName>AppModels</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

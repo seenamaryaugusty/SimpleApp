@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ModelLibraries
 {
-    public interface IImageSearchModel
+    public interface ISearchModel
     {
-        bool LoadImagesToLocal(string searchWord);
+        bool LoadSearchItemsToLocal(string searchWord);
 
-        string[] GetStaticImageUrls();
+        string[] GetSearchItems();
 
         void CleanLocal();
     }

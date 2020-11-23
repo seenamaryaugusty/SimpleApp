@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1209
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageAppUI", "FlickrImageSearch\ImageAppUI.csproj", "{666AC949-3D3F-44FF-9198-1B0F874BB81A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUI", "AppUI\AppUI.csproj", "{666AC949-3D3F-44FF-9198-1B0F874BB81A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageAppViewModels", "ImageAppViewModel\ImageAppViewModels.csproj", "{C115804C-C4B3-4050-95C7-6CE2F9C574EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppViewModels", "AppViewModels\AppViewModels.csproj", "{C115804C-C4B3-4050-95C7-6CE2F9C574EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageAppModels", "ImageAppModels\ImageAppModels.csproj", "{8933990D-1444-4113-8BDE-A2AF24949D05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppModels", "AppModels\AppModels.csproj", "{8933990D-1444-4113-8BDE-A2AF24949D05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLibraries", "ModelLibraries\ModelLibraries.csproj", "{3A61366B-2A53-4D03-AA67-FA8A79338701}"
 EndProject
