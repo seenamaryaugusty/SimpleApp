@@ -36,8 +36,8 @@ namespace AppViewModels
         }
         public event EventHandler CanExecuteChanged
         {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
+            add {}
+            remove {}
         }
 
         void ICommand.Execute(object parameter)
