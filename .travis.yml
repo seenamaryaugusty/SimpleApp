@@ -1,4 +1,6 @@
 language: csharp
 solution: SimpleApp.sln
+mono:
+  - latest
 script:
   - msbuild /p:Configuration=Release SimpleApp.sln
