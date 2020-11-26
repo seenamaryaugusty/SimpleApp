@@ -12,9 +12,9 @@ namespace AppViewModels
         public ISearchModel model { get; set; }
 
 
-        public SearchViewModel() : this(new ImageSearchModel()) // Datacontext being set in the view for now, therefore parameterless constructor is used
+        public SearchViewModel() : this(new SearchModel()) // Datacontext being set here for now, therefore parameterless constructor is used
         { }
-        public SearchViewModel(ISearchModel model) //for testing purpose
+        public SearchViewModel(ISearchModel model)
         {
             this.model = model;
             this.model.CleanLocal();
@@ -36,7 +36,6 @@ namespace AppViewModels
             if (this.model.LoadSearchItemsToLocal(searchWord.ToString()))
             {
                 NotifyPropertyChanged(nameof(this.SearchItems));
-
             }
         }
     }

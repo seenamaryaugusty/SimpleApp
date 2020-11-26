@@ -4,22 +4,22 @@ using Backend;
 
 namespace AppModels
 {
-    public class ImageSearchModel:ISearchModel
+    public class SearchModel:ISearchModel
     {
-        private IImageXmlHelper imageXmlHelper;
+        private IXmlHelper xmlHelper;
         private IFileHelper fileHelper;
-        public ImageSearchModel():this(new ImageXmlHelper(),new FileHelper())
+        public SearchModel():this(new ImageXmlHelper(),new FileHelper())
         {
         }
 
-        public ImageSearchModel(IImageXmlHelper imageXmlHelper,IFileHelper fileHelper)
+        public SearchModel(IXmlHelper xmlHelper,IFileHelper fileHelper)
         {
-            this.imageXmlHelper = imageXmlHelper;
+            this.xmlHelper = xmlHelper;
             this.fileHelper = fileHelper;
         }
         public string[] GetSearchItems()
         {
-            return this.imageXmlHelper.GetStaticImageUrls();
+            return this.xmlHelper.GetSearchArray();
         }
 
         public void CleanLocal()
@@ -29,7 +29,7 @@ namespace AppModels
         public bool LoadSearchItemsToLocal(string searchWord)
         {
             this.CleanLocal();
-            return this.imageXmlHelper.LoadImagesToLocal(searchWord);
+            return this.xmlHelper.LoadXmlDataToLocal(searchWord);
         }
     }
 }

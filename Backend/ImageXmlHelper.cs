@@ -9,12 +9,14 @@ using BackendLibraries;
 
 namespace Backend
 {
-    public class ImageXmlHelper: IImageXmlHelper
+    public class ImageXmlHelper: IXmlHelper
     {
         private const string FLICKR_API_KEY = "b67af3f67d6c2e519ee192a00ac1e53f";
         private const string url = "http://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + FLICKR_API_KEY + "&text=";
         private const string path = @"c:\photos.xml";
-        public string[] GetStaticImageUrls()
+
+        // Gets static image Urls
+        public string[] GetSearchArray()
         {
             string[] ImageUrls = new string[10];
             if (File.Exists(path))
@@ -25,7 +27,7 @@ namespace Backend
             return ImageUrls;
         }
 
-        public bool LoadImagesToLocal(string searchWord)
+        public bool LoadXmlDataToLocal(string searchWord)
         {
             try
             {

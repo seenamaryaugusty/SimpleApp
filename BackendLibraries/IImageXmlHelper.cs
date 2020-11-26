@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BackendLibraries
 {
-    public interface IImageXmlHelper
+    public interface IXmlHelper
     {
-        string[] GetStaticImageUrls();
+        string[] GetSearchArray();
 
-        bool LoadImagesToLocal(string searchWord);
+        bool LoadXmlDataToLocal(string searchWord);
     }
 }

@@ -9,22 +9,22 @@ namespace ModelTest
     [TestClass]
     public class ImageSearchModelTest
     {
-        private Mock<IImageXmlHelper> imageXmlHelperMock;
+        private Mock<IXmlHelper> imageXmlHelperMock;
         private Mock<IFileHelper> fileHelperMock;
-        private ImageSearchModel model;
+        private SearchModel model;
 
         [TestInitialize]
         public void TestInit()
         {
-            this.imageXmlHelperMock = new Mock<IImageXmlHelper>();
+            this.imageXmlHelperMock = new Mock<IXmlHelper>();
             this.fileHelperMock = new Mock<IFileHelper>();
-            this.model = new ImageSearchModel(this.imageXmlHelperMock.Object, this.fileHelperMock.Object);
+            this.model = new SearchModel(this.imageXmlHelperMock.Object, this.fileHelperMock.Object);
         }
 
         [TestMethod]
         public void ImageSearchModel_GetStaticImageUrls_Test()
         {
-            this.imageXmlHelperMock.Setup(im => im.GetStaticImageUrls()).Returns(new string[] { "sampleUrl" });
+            this.imageXmlHelperMock.Setup(im => im.GetSearchArray()).Returns(new string[] { "sampleUrl" });
             string actual = this.model.GetSearchItems()[0];
             string expected = "sampleUrl";
             Assert.AreEqual(actual, expected);
@@ -33,7 +33,7 @@ namespace ModelTest
         [TestMethod]
         public void ImageSearchModel_LoadImagesToLocal_Test()
         {
-            this.imageXmlHelperMock.Setup(im => im.LoadImagesToLocal(It.IsAny<string>())).Returns(true);
+            this.imageXmlHelperMock.Setup(im => im.LoadXmlDataToLocal(It.IsAny<string>())).Returns(true);
             Assert.IsTrue(this.model.LoadSearchItemsToLocal("sample"));
         }
     }
