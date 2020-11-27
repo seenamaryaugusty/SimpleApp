@@ -6,6 +6,7 @@ using System.Xml.XLinq;
 using System.Data.DLinq;
 using System.IO;
 using BackendLibraries;
+using Logging;
 
 namespace Backend
 {
@@ -14,15 +15,27 @@ namespace Backend
         private const string FLICKR_API_KEY = "b67af3f67d6c2e519ee192a00ac1e53f";
         private const string url = "http://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + FLICKR_API_KEY + "&text=";
         private const string path = @"c:\photos.xml";
+        private ILogger logger;
+        public ImageXmlHelper()
+        {
+            this.logger = LoggerFactory.GetLogger(LogType.File);
+        }
 
         // Gets static image Urls
         public string[] GetSearchArray()
         {
             string[] ImageUrls = new string[10];
-            if (File.Exists(path))
+            try
             {
-                ImageUrls = XDocument.Load(path).Descendants("url")
-                  .Select(element => element.Value).ToArray();
+                if (File.Exists(path))
+                {
+                    ImageUrls = XDocument.Load(path).Descendants("url")
+                      .Select(element => element.Value).ToArray();
+                }
+            }
+            catch(Exception ex)
+            {
+                this.logger.Log("Exception from ImageXmlHelper:" + ex);
             }
             return ImageUrls;
         }
@@ -61,7 +74,7 @@ namespace Backend
             }
             catch (Exception ex)
             {
-                // * FutureImprovement : logging and exception handling
+                this.logger.Log("Exception from ImageXmlHelper:" + ex);
                 return false;
             }
         }

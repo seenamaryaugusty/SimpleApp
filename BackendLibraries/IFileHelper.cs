@@ -9,5 +9,6 @@ namespace BackendLibraries
     public interface IFileHelper
     {
         void CleanLocal();
+
     }
 }
