@@ -21,10 +21,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTest", "ModelTest\Mode
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestReferenceDlls", "TestReferenceDlls", "{EDDD2A8B-5AAC-43CE-9FE0-4E9CA7250784}"
 	ProjectSection(SolutionItems) = preProject
+		TestReferenceDlls\Castle.Core.dll = TestReferenceDlls\Castle.Core.dll
 		TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll = TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 		TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll = TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 		TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll = TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 		TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.TestFramework.dll = TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+		TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll = TestReferenceDlls\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 		TestReferenceDlls\Moq.dll = TestReferenceDlls\Moq.dll
 		TestReferenceDlls\Moq.xml = TestReferenceDlls\Moq.xml
 	EndProjectSection
